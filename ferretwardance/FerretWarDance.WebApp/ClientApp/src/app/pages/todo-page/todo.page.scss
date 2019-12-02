@@ -1,6 +1,14 @@
 textarea.todo {
-  width:500px;
-  height:250px;
+  width:700px;
   font-family: 'Courier New';
   font-size:16px;
+  resize:both;
+  float:left;
+}
+.todo.long,
+.todo.archive {
+  height: 250px;
+}
+.todo.short{
+  height:500px;
 }

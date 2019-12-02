@@ -1,13 +1,19 @@
 <div class="page">
-  <textarea class="todo" pInputTextarea spellcheck="false"
-            *ngIf="todoWrap != null && todoWrap.longTodo != null"
-            [(ngModel)]="todoWrap.longTodo.content"></textarea>
-  <!--<p-editor [(ngModel)]="text" [style]="{'height':'320px'}"></p-editor>
-  <textarea class="todo" pInputTextarea
-            [(ngModel)]="text2"></textarea>-->
+  <div>
+    <textarea class="todo short" pInputTextarea spellcheck="false"
+              *ngIf="todoWrap != null && todoWrap.shortTodo != null"
+              [(ngModel)]="todoWrap.shortTodo.content"></textarea>
+  </div>
+  <div>
+    <textarea class="todo long" pInputTextarea spellcheck="false"
+              *ngIf="todoWrap != null && todoWrap.longTodo != null"
+              [(ngModel)]="todoWrap.longTodo.content"></textarea>
+    <textarea class="todo archive" pInputTextarea spellcheck="false"
+              *ngIf="todoWrap != null && todoWrap.archiveTodo != null"
+              [(ngModel)]="todoWrap.archiveTodo.content"></textarea>
+  </div>
   <div>
     <button (click)="btnSave()">Save</button>
     <button (click)="showTodoWrap()">Show me</button>
-    <button (click)="setText()">Set</button>
   </div>
 </div>

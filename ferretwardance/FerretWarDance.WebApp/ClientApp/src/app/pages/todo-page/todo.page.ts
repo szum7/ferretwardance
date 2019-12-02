@@ -38,10 +38,6 @@ export class TodoPage {
         console.log(this.text2);
     }
 
-    public setText() {
-        this.text2 = "-asdas\n-sdfdsf";
-    }
-
     public getFirstAll(callback: Function): void {
         this.todoService.getfirstall().subscribe((response) => {
             console.log("[" + (new Date()).toLocaleString() + "] [Get] OK.");
