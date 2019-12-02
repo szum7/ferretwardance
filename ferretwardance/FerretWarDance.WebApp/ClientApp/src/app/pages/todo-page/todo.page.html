@@ -1,2 +1,13 @@
-<button (click)="testCall()">Test call</button>
-<button (click)="getfirstall()">Get</button>
+<div class="page">
+  <textarea class="todo" pInputTextarea spellcheck="false"
+            *ngIf="todoWrap != null && todoWrap.longTodo != null"
+            [(ngModel)]="todoWrap.longTodo.content"></textarea>
+  <!--<p-editor [(ngModel)]="text" [style]="{'height':'320px'}"></p-editor>
+  <textarea class="todo" pInputTextarea
+            [(ngModel)]="text2"></textarea>-->
+  <div>
+    <button (click)="btnSave()">Save</button>
+    <button (click)="showTodoWrap()">Show me</button>
+    <button (click)="setText()">Set</button>
+  </div>
+</div>

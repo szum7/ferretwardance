@@ -34,5 +34,7 @@ npm i jquery --save
 npm i primeng --save
 npm i primeicons --save
 
+npm install quill --save
+
 TODO
 - setup api call on WebApp to TestTable records

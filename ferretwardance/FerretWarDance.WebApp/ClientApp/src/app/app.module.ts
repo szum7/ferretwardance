@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -5,6 +6,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { HttpClientModule } from '@angular/common/http';
 import { faInfoCircle, faCaretRight, faCaretLeft, faSun, faCog, faTimes, faTag, faAlignJustify } from '@fortawesome/free-solid-svg-icons';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { EditorModule } from 'primeng/editor';
 
 // Components
 import { AppComponent } from './app.component';
@@ -35,9 +38,11 @@ import { TodoService } from './services/todo-service/todo.service';
         TodoPage
     ],
     imports: [
+        FormsModule,
         BrowserModule,
         HttpClientModule,
         FontAwesomeModule,
+        InputTextareaModule, EditorModule,
         RouterModule.forRoot([
             { path: '', component: HomePage },
             { path: 'todo', component: TodoPage },

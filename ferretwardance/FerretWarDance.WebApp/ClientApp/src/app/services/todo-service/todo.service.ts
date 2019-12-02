@@ -36,4 +36,10 @@ export class TodoService extends TodoServiceLogic {
             .pipe(map(this.dummyPipe));
     }
 
+    save(todoWrap: any): Observable<any> {
+        return this.http
+            .post<any>(this.baseUrl + 'api/All/save', todoWrap)
+            .pipe(map(this.dummyPipe));
+    }
+
 }

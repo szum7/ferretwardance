@@ -1,4 +1,5 @@
 ﻿using FerretWarDance.BL;
+using FerretWarDance.DAL.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,18 @@ namespace FerretWarDance.WebApp.Controllers
         {
             var repo = new AllRepository();
             return Ok(repo.GetFirstAll());
+        }
+
+        [HttpPost("save")]
+        public ActionResult Save(TodoWrap data)
+        {
+            var repo = new AllRepository();
+
+            if (repo.Save(data))
+            {
+                return Ok(repo.GetFirstAll());
+            }
+            return Ok(new { message = "Not okie-dokie." });
         }
     }
 }
