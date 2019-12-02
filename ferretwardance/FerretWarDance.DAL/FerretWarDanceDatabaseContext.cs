@@ -1,7 +1,7 @@
 ﻿using System;
+using FerretWarDance.DAL.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using FerretWarDance.DAL.Models;
 
 namespace FerretWarDance.DAL
 {
@@ -16,7 +16,9 @@ namespace FerretWarDance.DAL
         {
         }
 
-        public virtual DbSet<TestTable> TestTable { get; set; }
+        public virtual DbSet<ArchiveTodo> ArchiveTodo { get; set; }
+        public virtual DbSet<LongTodo> LongTodo { get; set; }
+        public virtual DbSet<ShortTodo> ShortTodo { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,13 +30,41 @@ namespace FerretWarDance.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TestTable>(entity =>
+            modelBuilder.Entity<ArchiveTodo>(entity =>
             {
                 entity.HasKey(e => e.Id)
-                    .HasName("PK_TESTTABLE_ID")
+                    .HasName("PK_ARCHIVETODO_ID")
                     .IsClustered(false);
 
-                entity.Property(e => e.Name)
+                entity.Property(e => e.Content).HasColumnType("text");
+
+                entity.Property(e => e.IsActive)
+                    .IsRequired()
+                    .HasMaxLength(255);
+            });
+
+            modelBuilder.Entity<LongTodo>(entity =>
+            {
+                entity.HasKey(e => e.Id)
+                    .HasName("PK_LONGTODO_ID")
+                    .IsClustered(false);
+
+                entity.Property(e => e.Content).HasColumnType("text");
+
+                entity.Property(e => e.IsActive)
+                    .IsRequired()
+                    .HasMaxLength(255);
+            });
+
+            modelBuilder.Entity<ShortTodo>(entity =>
+            {
+                entity.HasKey(e => e.Id)
+                    .HasName("PK_SHORTTODO_ID")
+                    .IsClustered(false);
+
+                entity.Property(e => e.Content).HasColumnType("text");
+
+                entity.Property(e => e.IsActive)
                     .IsRequired()
                     .HasMaxLength(255);
             });

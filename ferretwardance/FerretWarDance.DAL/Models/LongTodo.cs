@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace FerretWarDance.DAL.Models
 {
-    public partial class TestTable
+    public partial class LongTodo
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public int? OrderNumber { get; set; }
+        public string Content { get; set; }
+        public string IsActive { get; set; }
     }
 }

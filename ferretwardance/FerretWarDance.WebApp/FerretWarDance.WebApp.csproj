@@ -14,6 +14,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +33,7 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\pages\test-table-page\test-table.page.ts" />
+    <None Remove="ClientApp\src\app\pages\todo-page\todo.page.ts" />
     <None Remove="ClientApp\src\app_safe\app.component.html" />
     <None Remove="ClientApp\src\app_safe\app.component.ts" />
     <None Remove="ClientApp\src\app_safe\app.module.ts" />
@@ -54,6 +59,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\pages\todo-page\todo.page.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\pages\test-table-page\test-table.page.ts" />
   </ItemGroup>
 

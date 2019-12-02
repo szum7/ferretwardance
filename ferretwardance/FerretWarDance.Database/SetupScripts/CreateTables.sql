@@ -1,6 +1,20 @@
-﻿CREATE TABLE [dbo].[TestTable] (
+﻿CREATE TABLE [dbo].[LongTodo] (
 	[Id] int IDENTITY(1, 1) NOT NULL,
-	[Name] nvarchar(255) COLLATE Hungarian_CI_AS NOT NULL,
-	[OrderNumber] int NULL,
-	CONSTRAINT [PK_TESTTABLE_ID] PRIMARY KEY NONCLUSTERED ([Id])
+	[Content] TEXT COLLATE Hungarian_CI_AS NULL,
+	[IsActive] nvarchar(255) COLLATE Hungarian_CI_AS NOT NULL,
+	CONSTRAINT [PK_LONGTODO_ID] PRIMARY KEY NONCLUSTERED ([Id])
+)
+
+CREATE TABLE [dbo].[ShortTodo] (
+	[Id] int IDENTITY(1, 1) NOT NULL,
+	[Content] TEXT COLLATE Hungarian_CI_AS NULL,
+	[IsActive] nvarchar(255) COLLATE Hungarian_CI_AS NOT NULL,
+	CONSTRAINT [PK_SHORTTODO_ID] PRIMARY KEY NONCLUSTERED ([Id])
+)
+
+CREATE TABLE [dbo].[ArchiveTodo] (
+	[Id] int IDENTITY(1, 1) NOT NULL,
+	[Content] TEXT COLLATE Hungarian_CI_AS NULL,
+	[IsActive] nvarchar(255) COLLATE Hungarian_CI_AS NOT NULL,
+	CONSTRAINT [PK_ARCHIVETODO_ID] PRIMARY KEY NONCLUSTERED ([Id])
 )

@@ -14,45 +14,50 @@ import { LoadingScreenComponent } from './components/loading-screen/loading-scre
 // Pages
 import { HomePage } from './pages/home-page/home.page';
 import { TestTablePage } from './pages/test-table-page/test-table.page';
+import { TodoPage } from './pages/todo-page/todo.page';
 
 // Services
 import { LoadingScreenService } from './services/loading-screen-service/loading-screen.service';
 import { RouterService } from './services/router-service/router.service';
 import { TestTableService } from './services/test-table-service/test-table.service';
 import { BaseHttpService } from './services/base-http.service';
+import { TodoService } from './services/todo-service/todo.service';
 
 @NgModule({
-  declarations: [
-    // Components
-    AppComponent,
-    NavComponent,
-    LoadingScreenComponent,
-    // Pages
-    HomePage,
-    TestTablePage
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FontAwesomeModule,
-    RouterModule.forRoot([
-      { path: '', component: HomePage },
-      { path: 'testtable', component: TestTablePage },
-    ], { useHash: true })
-  ],
-  providers: [
-    LoadingScreenService,
-    RouterService,
-    BaseHttpService,
-    TestTableService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        // Components
+        AppComponent,
+        NavComponent,
+        LoadingScreenComponent,
+        // Pages
+        HomePage,
+        TestTablePage,
+        TodoPage
+    ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        FontAwesomeModule,
+        RouterModule.forRoot([
+            { path: '', component: HomePage },
+            { path: 'todo', component: TodoPage },
+            { path: 'testtable', component: TestTablePage },
+        ], { useHash: true })
+    ],
+    providers: [
+        LoadingScreenService,
+        RouterService,
+        BaseHttpService,
+        TestTableService,
+        TodoService
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule { 
-  constructor() {
-      library.add(faInfoCircle);
-      library.add(faCog);
-      library.add(faAlignJustify);
-      library.add(faTag);
-  }
+export class AppModule {
+    constructor() {
+        library.add(faInfoCircle);
+        library.add(faCog);
+        library.add(faAlignJustify);
+        library.add(faTag);
+    }
 }

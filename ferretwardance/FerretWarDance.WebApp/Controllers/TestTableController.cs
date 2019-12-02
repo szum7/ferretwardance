@@ -12,12 +12,5 @@ namespace FerretWarDance.WebApp.Controllers
         {
             return Ok(new { message = "Test call got it's response. I am that response." });
         }
-
-        [HttpGet("get")]
-        public ActionResult Get()
-        {
-            var repo = new TestTableRepository();
-            return Ok(repo.Get());
-        }
     }
 }
