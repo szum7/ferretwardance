@@ -1,0 +1,4 @@
+﻿
+-- Delete resource group
+in powershell
+Remove-AzResourceGroup -Name SkeletonWebApp20191124045855ResourceGroup
