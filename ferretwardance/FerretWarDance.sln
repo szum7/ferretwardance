@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notes", "Notes\Notes.csproj", "{F5C310DB-2705-42BE-BD24-EF1DC238BCDD}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FerretWarDance.Database", "FerretWarDance.Database\FerretWarDance.Database.sqlproj", "{DC5ED981-10AC-409C-8359-34F3766B37F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FerretWarDance.BL", "FerretWarDance.BL\FerretWarDance.BL.csproj", "{14A485E9-A9CB-452A-BA16-11C33361EEC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FerretWarDance.DAL", "FerretWarDance.DAL\FerretWarDance.DAL.csproj", "{C326FE26-52B7-420B-9EE5-D502BBB904EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FerretWarDance.WebApp", "FerretWarDance.WebApp\FerretWarDance.WebApp.csproj", "{BA76E43C-A3AF-4A2A-B719-4709C0DE1DF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FerretWarDance.Runner", "FerretWarDance.Runner\FerretWarDance.Runner.csproj", "{0A52CC8E-5977-46EC-933C-FA0D37C610FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5C310DB-2705-42BE-BD24-EF1DC238BCDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C310DB-2705-42BE-BD24-EF1DC238BCDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C310DB-2705-42BE-BD24-EF1DC238BCDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C310DB-2705-42BE-BD24-EF1DC238BCDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5ED981-10AC-409C-8359-34F3766B37F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5ED981-10AC-409C-8359-34F3766B37F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5ED981-10AC-409C-8359-34F3766B37F2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DC5ED981-10AC-409C-8359-34F3766B37F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5ED981-10AC-409C-8359-34F3766B37F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5ED981-10AC-409C-8359-34F3766B37F2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{14A485E9-A9CB-452A-BA16-11C33361EEC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14A485E9-A9CB-452A-BA16-11C33361EEC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14A485E9-A9CB-452A-BA16-11C33361EEC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14A485E9-A9CB-452A-BA16-11C33361EEC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C326FE26-52B7-420B-9EE5-D502BBB904EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C326FE26-52B7-420B-9EE5-D502BBB904EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C326FE26-52B7-420B-9EE5-D502BBB904EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C326FE26-52B7-420B-9EE5-D502BBB904EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA76E43C-A3AF-4A2A-B719-4709C0DE1DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA76E43C-A3AF-4A2A-B719-4709C0DE1DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA76E43C-A3AF-4A2A-B719-4709C0DE1DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA76E43C-A3AF-4A2A-B719-4709C0DE1DF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A52CC8E-5977-46EC-933C-FA0D37C610FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A52CC8E-5977-46EC-933C-FA0D37C610FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A52CC8E-5977-46EC-933C-FA0D37C610FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A52CC8E-5977-46EC-933C-FA0D37C610FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {890F8B35-DFCD-41D9-8BC4-A53817A45514}
+	EndGlobalSection
+EndGlobal

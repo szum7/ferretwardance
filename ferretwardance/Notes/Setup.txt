@@ -1,0 +1,38 @@
+﻿Solution setup
+- create repo on github
+- git clone repo to C:\Users\arsz01\source\repos\
+- create Black Solution to C:\Users\arsz01\source\repos\SkeletonDotNetAg-t1 as "SkeletonDotNetAgT1"
+- create Class Library (.NET Core) project as "Notes" for note documents.
+- create "Skeleton.Database" (SQL Server Database Project)
+- create "Skeleton.DAL" (Class Library (.NET Core) project)
+- create "Skeleton.BL" (Class Library (.NET Core) project)
+- create runnable .NET Core Console App project called "Skeleton.Runner" (may be unnecessary)
+- create "Skeleton.WebApp" (ASP.NET Core Web Application)
+- add BL reference to WebApp
+- add DAL reference to BL
+
+Setup .DAL for entity framework
+- install Microsoft.EntityFrameworkCore in DAL
+- install Microsoft.EntityFrameworkCore.Design in DAL
+- Install-Package Microsoft.EntityFrameworkCore.Tools in DAL
+- install Microsoft.EntityFrameworkCore.SqlServer in DAL
+
+Create model based on existing database
+- Open SQL Server Object Explorer
+- Find your database "SQL Server / (localdb)\ProjectsV13 (SQL Server 13.0.4001 - <domain>\<username> / Databases / Skeleton.Database"
+- Right click on the database -> 'Properties' -> Copy the 'Connection string'
+- Paste it to the scaffolding command: Scaffold-DbContext "<paste connection string here>" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+- Run command
+
+Install node modules
+npm i @fortawesome/fontawesome-svg-core --save
+npm i @fortawesome/angular-fontawesome --save
+npm install @fortawesome/free-solid-svg-icons --save
+npm i bootstrap --save
+npm i popper.js --save
+npm i jquery --save
+npm i primeng --save
+npm i primeicons --save
+
+TODO
+- setup api call on WebApp to TestTable records
