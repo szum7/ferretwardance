@@ -13,6 +13,10 @@ import { EditorModule } from 'primeng/editor';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
+import { GreetingsComponent } from './components/home-tiles/greetings/greetings.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ProductsComponent } from './components/home-tiles/products/products.component';
+import { ReferencePreviewComponent } from './components/home-tiles/reference-preview/reference-preview.component';
 
 // Pages
 import { HomePage } from './pages/home-page/home.page';
@@ -31,7 +35,11 @@ import { TodoService } from './services/todo-service/todo.service';
         // Components
         AppComponent,
         NavComponent,
+        FooterComponent,
         LoadingScreenComponent,
+        GreetingsComponent,
+        ProductsComponent,
+        ReferencePreviewComponent,
         // Pages
         HomePage,
         TestTablePage,
