@@ -1,1 +1,9 @@
 <p>References.</p>
+
+<div class="grid">
+    <div class="column" *ngFor="let column of images">
+        <div class="tile" *ngFor="let image of column">
+            <img src="{{image.url}}" alt="{{image.title}}" />
+        </div>
+    </div>
+</div>
