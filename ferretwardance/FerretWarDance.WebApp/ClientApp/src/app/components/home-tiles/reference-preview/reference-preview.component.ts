@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ReferencePreviewComponent implements OnInit {
 
   images: any;
+  imageList: Array<any>;
   urlBase: string;
 
   constructor() {
@@ -23,6 +24,12 @@ export class ReferencePreviewComponent implements OnInit {
       [        
         {url: this.urlBase + "004.jpeg", title: "Kép4"},
       ]
+    ];
+    this.imageList = [
+      {url: this.urlBase + "001.jpg", title: "Kép1"},
+      {url: this.urlBase + "002.jpg", title: "Kép2"},
+      {url: this.urlBase + "003.jpg", title: "Kép3"},
+      {url: this.urlBase + "004.jpeg", title: "Kép4"}
     ];
   }
   

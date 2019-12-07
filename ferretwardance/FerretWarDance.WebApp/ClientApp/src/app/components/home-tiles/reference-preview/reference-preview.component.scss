@@ -1,11 +1,25 @@
 .grid{
     vertical-align: top;
+    clear: both;
+    max-width:1200px;
+    margin:auto;
 }
 .column{
     width:33.33%;
     vertical-align: top;
     display: inline-block;
 }
+.tile{
+    padding:5px;
+}
 .tile img{
     width:100%;
+    border-radius: 15px;
+    border:1px solid #eee;
+}
+
+@media screen and (max-width: 800px) {
+    .column{
+        width:50%;
+    }
 }
