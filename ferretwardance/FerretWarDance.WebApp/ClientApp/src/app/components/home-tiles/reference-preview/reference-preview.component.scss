@@ -18,6 +18,30 @@
     border:1px solid #eee;
 }
 
+.title h2{
+    text-align: center;
+}
+
+.filter{
+    text-align: center;
+}
+.filter-card,
+.txt{
+    margin:5px 15px;
+}
+.txt{
+    color:#777;
+}
+.filter-card{
+    cursor: pointer;
+}
+.filter-card.active{
+    border-bottom: 2px solid #aa45aa;
+}
+.ib{
+    display: inline-block;
+}
+
 @media screen and (max-width: 800px) {
     .column{
         width:50%;

@@ -1,5 +1,3 @@
-<p>References.</p>
-
 <!--<div style="width:700px;">
     <div style="float:left;" *ngFor="let image of imageList">        
         <img src="{{image.url}}" alt="{{image.title}}" style="max-width:320px;" />
@@ -7,6 +5,15 @@
 </div>-->
 
 <div class="grid">
+    <div class="title">
+        <h2>References</h2>
+    </div>
+    <div class="filter">
+        <div class="ib txt">Filter:</div>
+        <div class="ib filter-card">All</div>
+        <div class="ib filter-card active">Photo</div>
+        <div class="ib filter-card">Painting</div>
+    </div>
     <div class="column" *ngFor="let column of images">
         <div class="tile" *ngFor="let image of column">
             <img src="{{image.url}}" alt="{{image.title}}" />
