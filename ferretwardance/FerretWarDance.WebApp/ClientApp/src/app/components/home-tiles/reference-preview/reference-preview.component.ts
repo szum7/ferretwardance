@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+class Tile {
+  url: string;
+  title: string;
+  category: string;  
+}
+
 @Component({
   selector: 'app-reference-preview-component',
   templateUrl: './reference-preview.component.html',
