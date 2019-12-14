@@ -1,0 +1,22 @@
+.blanket{
+    position: absolute;
+    top:0;left:0;right:0;bottom:0;
+    background: url('../../../../assets/patterns/001.png');
+    opacity: 0.2;
+}
+.video-wrap{
+    overflow: hidden;
+    position: relative;
+}
+.logo-wrap{
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    z-index: 100;
+    color:#fff;
+}
+#bgVideo {
+    min-width: 100%; 
+    min-height: 100%;
+}
