@@ -10,9 +10,11 @@ export class ReferencePreviewComponent implements OnInit {
   images: any;
   imageList: Array<any>;
   urlBase: string;
+  filter: string;
 
   constructor() {
     this.urlBase = "../../../../assets/images/";
+    this.filter = "instagram";
     this.images = [
       [
         {url: this.urlBase + "001.jpg", title: "Kép1"},
@@ -34,6 +36,10 @@ export class ReferencePreviewComponent implements OnInit {
   }
   
   ngOnInit(): void {
+  }
+
+  setFilter(val: string): void{
+    this.filter = val;
   }
 
 }
