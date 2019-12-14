@@ -11,10 +11,11 @@
 }
 .tile{
     padding:5px;
+    position: relative;
 }
 .tile img{
     width:100%;
-    border-radius: 15px;
+    border-radius: 10px;
     border:1px solid #eee;
 }
 
@@ -42,6 +43,30 @@
 }
 .ib{
     display: inline-block;
+}
+
+.icons{
+    position: absolute;
+    top:15px;left:0;right:15px;
+    height:30px;
+    text-align: right;
+}
+.icon{
+    padding:5px 8px;
+    border-radius: 10px;
+    background:#fff;
+    color:#888;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border:1px solid #888;
+    margin-left:10px;
+    display: none;
+}
+.tile:hover .icon{
+    display: inline-block;
+}
+.icon:hover{
+    color:#222;
 }
 
 @media screen and (max-width: 800px) {

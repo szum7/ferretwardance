@@ -3,6 +3,7 @@
         <h2>References</h2>
     </div>-->
     <div class="filter">
+        <div class="ib txt">Instagram feed</div>
         <div class="ib txt">Filter:</div>
         <div class="ib filter-card">All</div>
         <div class="ib filter-card active">Photo</div>
@@ -11,9 +12,11 @@
     <div class="column" *ngFor="let column of images">
         <div class="tile" *ngFor="let image of column">
             <div class="icons">
-                <div class="icon">
-                    <fa-icon icon="faPaperPlane"></fa-icon>
-                    <fa-icon icon="tag"></fa-icon>
+                <div class="icon" title="Open in popup">
+                    <fa-icon icon="window-restore"></fa-icon>
+                </div>
+                <div class="icon" title="Open in new window">
+                    <fa-icon icon="window-maximize"></fa-icon>
                 </div>
             </div>
             <img src="{{image.url}}" alt="{{image.title}}" />
