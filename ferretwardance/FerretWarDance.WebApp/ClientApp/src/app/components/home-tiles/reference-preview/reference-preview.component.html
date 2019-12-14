@@ -10,6 +10,12 @@
     </div>
     <div class="column" *ngFor="let column of images">
         <div class="tile" *ngFor="let image of column">
+            <div class="icons">
+                <div class="icon">
+                    <fa-icon icon="faPaperPlane"></fa-icon>
+                    <fa-icon icon="tag"></fa-icon>
+                </div>
+            </div>
             <img src="{{image.url}}" alt="{{image.title}}" />
         </div>
     </div>

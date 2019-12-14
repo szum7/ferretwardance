@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { HttpClientModule } from '@angular/common/http';
-import { faInfoCircle, faCaretRight, faCaretLeft, faSun, faCog, faTimes, faTag, faAlignJustify } from '@fortawesome/free-solid-svg-icons';
+import { faInfoCircle, faCaretRight, faCaretLeft, faSun, faCog, faTimes, faTag, faAlignJustify, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { EditorModule } from 'primeng/editor';
 
@@ -72,5 +72,6 @@ export class AppModule {
         library.add(faCog);
         library.add(faAlignJustify);
         library.add(faTag);
+        library.add(faPaperPlane);
     }
 }
