@@ -10,16 +10,19 @@ export class GreetingsComponent implements OnInit {
   public pageHeight: number;
 
   ngOnInit(): void {
-    var body = document.body,
-    html = document.documentElement;
-
-    console.log(body.scrollHeight);
-    console.log(body.offsetHeight);
-    console.log(html.clientHeight);
-    console.log(html.scrollHeight);
-    console.log(html.offsetHeight);
-
-    //this.pageHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    let html = document.documentElement;
     this.pageHeight = html.clientHeight - 56;
+    
+    //var body = document.body,
+    //this.pageHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+  }
+
+  toggleVideo(): void {
+    let vid = <HTMLVideoElement>document.getElementById("bgVideo");
+    if (vid.paused) {
+      vid.play();
+    } else {
+      vid.pause();
+    }
   }
 }
