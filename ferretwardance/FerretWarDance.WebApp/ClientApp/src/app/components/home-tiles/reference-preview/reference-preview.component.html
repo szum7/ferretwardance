@@ -10,7 +10,7 @@
         <div class="ib filter-card" [ngClass]="{'active': filter === 'painting'}" (click)="setFilter('painting')">Painting</div>
     </div>
     <div *ngIf="filter !== 'instagram'">
-        <div class="column" *ngFor="let column of filteredImages">
+        <div class="column" *ngFor="let column of columns">
             <div class="tile" *ngFor="let image of column">
                 <div>
                     <div class="icons">
