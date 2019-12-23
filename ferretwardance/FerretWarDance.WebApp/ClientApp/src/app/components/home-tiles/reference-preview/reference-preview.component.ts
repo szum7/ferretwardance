@@ -25,8 +25,8 @@ export class ReferencePreviewComponent implements OnInit {
   ngOnInit(): void {
     let urlBase = "../../../../assets/images/";
     let originalImages = [
-      new Tile(urlBase + "001.jpg", "", "photo", 1),
-      new Tile(urlBase + "002.jpg", "", "photo", 2),
+      new Tile(urlBase + "001.jpg", "", "photo", 2),
+      new Tile(urlBase + "002.jpg", "", "painting", 1),
       new Tile(urlBase + "003.jpg", "", "painting", 3),
       new Tile(urlBase + "004.jpeg", "", "photo", 4),
       new Tile(urlBase + "005.jpg", "", "photo", 5),
@@ -36,16 +36,16 @@ export class ReferencePreviewComponent implements OnInit {
       new Tile(urlBase + "009.png", "", "painting", 9)
     ];
     this.grid = new Grid(originalImages);
-    this.grid.initTiles();
+    this.grid.initTiles(window.innerWidth);
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    console.log(window.innerWidth);
+    this.grid.initTiles(window.innerWidth); 
   }
 
   setFilter(newFilter: string): void{
-    this.grid.buildTiles(newFilter);    
+    this.grid.buildTiles(newFilter, window.innerWidth);    
   }
 
 }

@@ -6,6 +6,7 @@ export class Grid {
   private filteredTiles: Array<Tile>;
   public columns: Array<Array<Tile>>;
   public filter: string;
+  private readonly THREE_COLUMN_MIN_WIDTH: number = 800;
 
   constructor(originalTiles: Array<Tile>) {
 
@@ -16,16 +17,16 @@ export class Grid {
     this.filter = 'all';
   }
 
-  initTiles(): void {
-    this.buildTiles(this.filter);
+  initTiles(pageWidth: number): void {
+    this.buildTiles(this.filter, pageWidth);
   }
 
-  buildTiles(filter: string): void {
+  buildTiles(filter: string, pageWidth: number): void {
     this.filter = filter;
     this.resetColumns();
     this.filterTiles();
     this.orderTiles();
-    this.spreadTiles(this.filteredTiles, this.columns);
+    this.spreadTiles(this.filteredTiles, this.columns, pageWidth);
   }
 
   private resetColumns(): void {
@@ -44,7 +45,7 @@ export class Grid {
     }
   }
 
-  private spreadTiles(source: Array<Tile>, destination: Array<Array<Tile>>): void {
+  private spreadTiles(source: Array<Tile>, destination: Array<Array<Tile>>, pageWidth: number): void {
     for (let i = 0, o = 0; i < source.length; i++) {
 
       const el = source[i];
@@ -55,8 +56,12 @@ export class Grid {
         el.category,
         el.order)
       );
-
-      o = (o == 2) ? 0 : o + 1;
+    
+      if (pageWidth < this.THREE_COLUMN_MIN_WIDTH){
+        o = (o == 1) ? 0 : o + 1;
+      } else {
+        o = (o == 2) ? 0 : o + 1;
+      }
     }
   }
 
