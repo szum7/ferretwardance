@@ -1,9 +1,13 @@
+$pageWidth: 1200px;
+
 * {
     font-family: 'Open Sans';
 }
-
-.content-page{
-    max-width: 1200px;
+.page-width,
+.content-page {
+    max-width: $pageWidth;
+}
+.content-page {
     margin: auto;
-    padding:5px;
+    padding:5px;    
 }
