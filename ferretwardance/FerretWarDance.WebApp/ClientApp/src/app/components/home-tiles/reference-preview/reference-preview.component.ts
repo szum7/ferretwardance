@@ -75,9 +75,6 @@ class Grid {
 })
 export class ReferencePreviewComponent implements OnInit {
 
-  images: any;
-  imageList: Array<any>;
-  urlBase: string;
   filter: string;
 
   originalImages: Array<Tile>;
@@ -87,41 +84,22 @@ export class ReferencePreviewComponent implements OnInit {
     
     this.filter = "all";
 
-    this.urlBase = "../../../../assets/images/";
+    let urlBase = "../../../../assets/images/";
 
     this.originalImages = [
-      new Tile(this.urlBase + "001.jpg", "", "photo", 1),
-      new Tile(this.urlBase + "002.jpg", "", "photo", 2),
-      new Tile(this.urlBase + "003.jpg", "", "painting", 3),
-      new Tile(this.urlBase + "004.jpeg", "", "photo", 4),
-      new Tile(this.urlBase + "005.jpg", "", "photo", 5),
-      new Tile(this.urlBase + "006.jfif", "", "painting", 6),
-      new Tile(this.urlBase + "007.jpg", "", "photo", 7),
-      new Tile(this.urlBase + "008.jpg", "", "painting", 8),
-      new Tile(this.urlBase + "009.png", "", "painting", 9)
+      new Tile(urlBase + "001.jpg", "", "photo", 1),
+      new Tile(urlBase + "002.jpg", "", "photo", 2),
+      new Tile(urlBase + "003.jpg", "", "painting", 3),
+      new Tile(urlBase + "004.jpeg", "", "photo", 4),
+      new Tile(urlBase + "005.jpg", "", "photo", 5),
+      new Tile(urlBase + "006.jfif", "", "painting", 6),
+      new Tile(urlBase + "007.jpg", "", "photo", 7),
+      new Tile(urlBase + "008.jpg", "", "painting", 8),
+      new Tile(urlBase + "009.png", "", "painting", 9)
     ];
 
 
     this.buildFilteredImages();
-
-    // this.images = [
-    //   [
-    //     new Tile(this.urlBase + "001.jpg", "", "photo"),
-    //     new Tile(this.urlBase + "002.jpg", "", "photo")
-    //   ],
-    //   [
-    //     new Tile(this.urlBase + "003.jpg", "", "painting")
-    //   ],
-    //   [
-    //     new Tile(this.urlBase + "004.jpeg", "", "painting")
-    //   ]
-    // ];
-    // this.imageList = [
-    //   {url: this.urlBase + "001.jpg", title: "Kép1"},
-    //   {url: this.urlBase + "002.jpg", title: "Kép2"},
-    //   {url: this.urlBase + "003.jpg", title: "Kép3"},
-    //   {url: this.urlBase + "004.jpeg", title: "Kép4"}
-    // ];
   }
   
   ngOnInit(): void {
@@ -136,13 +114,6 @@ export class ReferencePreviewComponent implements OnInit {
   setFilter(val: string): void{
     this.filter = val;
     this.buildFilteredImages();
-  }
-
-
-  private orderImageList(): void {
-    // Check page width -> 2 | 3 columns
-    // Order by 'order' property
-    // Copy it to property
   }
 
   buildFilteredImages(): void {
@@ -166,11 +137,6 @@ export class ReferencePreviewComponent implements OnInit {
 
       o = (o == 2) ? 0 : o + 1;
     }
-
-    // Filter
-    // Copy to property
   }
-
-
-
+  
 }
